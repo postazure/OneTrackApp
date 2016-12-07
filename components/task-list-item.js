@@ -1,25 +1,16 @@
+
 import React, { Component } from 'react';
 import {
   StyleSheet,
+  Text,
   View
 } from 'react-native';
 
-import NewTaskForm from './new-task-form.js'
-import TaskList from './task-list.js'
-
-export default class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      tasks: props.persistedState.tasks || []
-    }
-  }
+export default class TaskListItem extends Component {
 
   render() {
     return (
       <View style={styles.container}>
-        <NewTaskForm />
-        <TaskList tasks={this.state.tasks}/>
       </View>
     );
   }
