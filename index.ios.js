@@ -12,20 +12,21 @@ import {
   View
 } from 'react-native';
 
+import App from './components/app.js'
+
 export default class OneTrackApp extends Component {
+  constructor() {
+    super();
+    this.fixtureTasks = {tasks: [
+      {name: 'Active Task', active: true},
+      {name: 'Inactive Task 1', active: false},
+      {name: 'Inactive Task 2', active: false}
+    ]};
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <App persistedState={this.fixtureTasks}/>
       </View>
     );
   }
