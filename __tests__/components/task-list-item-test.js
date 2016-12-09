@@ -7,9 +7,7 @@ describe('TaskList', () => {
   it('should display a task name', () => {
 
     let subject = shallow(<TaskListItem name={'task name'} />);
-
-    expect(subject.contains(
-      <Text>task name</Text>
-    )).toBeTruthy();
+    let item = subject.find(Text)
+    expect(item.contains('task name')).toBeTruthy();
   });
 })

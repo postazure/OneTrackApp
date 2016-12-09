@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 import NewTaskForm from './new-task-form.js'
+import CurrentTask from './current-task.js'
 import TaskList from './task-list.js'
 
 export default class App extends Component {
@@ -18,6 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <CurrentTask />
         <NewTaskForm />
         <TaskList tasks={this.state.tasks}/>
       </View>
@@ -28,18 +30,7 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'space-around',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });

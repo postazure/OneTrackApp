@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-export default class NewTaskForm extends Component {
+export default class CurrentTask extends Component {
   foobar(){
     return true;
   }
@@ -14,7 +14,7 @@ export default class NewTaskForm extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Text>[NewTaskForm]</Text>
+      <Text>[CurrentTask]</Text>
       </View>
     );
   }
@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
   container: {
     flex: .25,
     alignItems: 'center',
-    backgroundColor: 'red',
+    backgroundColor: 'blue',
   }
 });
